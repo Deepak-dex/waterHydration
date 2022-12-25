@@ -1,0 +1,175 @@
+/* calorie */
+
+.calorie_form{
+    display: flex;
+    justify-content: space-between;
+    width: 14em;
+    margin-right: 0.5em;
+}
+
+.calorie_form input{
+    border: 1px  solid grey;
+    outline: none;
+    border-radius: 6px;
+}
+
+.calorie_form input[type=text]{
+    width: 9em;
+}
+
+.calorie_form input[type=number]{
+    width: 4em;
+    height: 21px;
+    padding-right:23px; 
+    text-align:right;
+    margin-right: .2em;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/* meal list */
+
+.meal_list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: .5em;
+    margin: 1em 0em;
+    height: 10em;
+    overflow-y: scroll;
+    border-radius: 14px;
+}
+
+.meal_item{
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.meal_item > img{
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+
+.meal_name{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.meal_name>span:first-child{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.meal_dis{
+    font-size: .6rem;
+    font-weight: 400;
+    max-width: 27ch;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(235, 227, 227, 0.859); 
+    border-radius: 8px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff7200; 
+    border-radius: 8px;
+}
+
+#track{
+    display: block;
+    color: white;
+    background-color: #ff7200;
+    border-radius: 5px;
+    width: 80%;
+    padding: 0.3em 0em;
+    margin: 0.5em auto;
+    text-align: center;
+    cursor: pointer;
+}
+/* cal progress ---------- */
+.calorie_progress_chart_daily{
+    display: flex;
+    /* flex-direction: column; */
+    padding: 0.6em;
+}
+
+#calorieLine{
+    margin-right: 1em;
+}
+
+.calorie_progress_nutrients{
+    display: flex ;
+    flex-direction: column;
+    width: 7em;
+}
+
+/* progress bar */
+
+.nutrient_status{
+    display: flex;
+    flex-direction: column; 
+}
+
+.nutrient_status>div{
+    display: flex;
+    align-items: center;
+    grid-column-gap: 0.5em;
+}
+
+.nutrient_status>div:first-child{
+    height: 2rem;
+}
+
+.nutrient_status >div> p{
+    font-size: 0.7rem;
+}
+
+.nutrient_status >div> img{
+    height: 1em;
+}
+
+/* progress */
+.nutrient_status_progress{
+    position: relative;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 7px;
+    border-radius: 4px;
+}
+
+.nutrient_status_progress>div{
+    /* position: relative;
+    top: 0; */
+    background-color: #ff7200;
+    height: 7px;
+    border-radius: 4px;
+    width: 60%;
+}
+
+.nutrient_status_progress>span{
+    position: absolute;
+    top: -14px;
+    right: 0px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #ff7200;
+}
+

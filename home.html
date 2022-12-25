@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/calorie.css">
+    <link rel="stylesheet" href="/css/water.css">
+    <link rel="stylesheet" href="/css/medicine.css">
+    <link rel="stylesheet" href="/css/switch.css">
+    <link rel="stylesheet" href="/css/sleep.css">
+    <link rel="stylesheet" href="/css/weight.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
+    <script type="module" src="/js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://rawgit.com/grudus/Timepicker/master/dist/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <svg xmlns="http://www.w3.org/2000/svg" width="169" height="45" viewBox="0 0 169 45">
+            <text id="WaterHydration" transform="translate(0 25)" fill="#b4e1d6" font-size="24" font-family="MyanmarText, Myanmar Text"><tspan x="0" y="0">Water</tspan><tspan y="0" fill="#ff7200">Hydration</tspan></text>
+        </svg>        
+        <div>
+            <img src="https://img.icons8.com/small/96/000000/user-male-circle.png" id="profile"/>
+            <div>    
+            </div>
+            <span id="logout">logout</span>
+        </div>                      
+    </nav>
+    <div class="main">
+        <div class="left">
+            <div class="greeting">
+                <h1>Hi Deepak Tiwari</h1>
+                <p>To Losse 10kg in 20 weeks yo need to</p>
+            </div>
+            <div class="nutrition_box ">
+            <h6>Nutrition</h6>
+            <div class="nutrition_wrapper">
+                <div class="nutrition_container">
+                    <div class="nutrition_icon">
+                        <div>
+                            <img src="/assets/restaurant.png" alt="">
+                        </div>
+                        <div>
+                            <canvas id="caloriePie"></canvas>
+                        </div>
+                    </div>
+                    <p>Eat upto 1500 cal</p>
+                </div>
+                <img src="https://img.icons8.com/ios-glyphs/90/000000/macos-maximize.png" class="add_rounded_icon" alt="">
+            </div>
+            <div class="nutrition_detail">
+                <p>Which meal you would like to track?</p>
+                <div class="nutrition_detail_add">
+                    <div class="meal">
+                        <span>Breakfast</span>
+                        <div class="meal_cal">
+                            <span>0 of 400 Cal</span>
+                            <img src="https://img.icons8.com/android/96/000000/plus.png" alt="">
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Morning Snack</span>
+                        <div class="meal_cal">
+                            <span>0 of 400 Cal</span>
+                            <img src="https://img.icons8.com/android/96/000000/plus.png" alt="">
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Lunch</span>
+                        <div class="meal_cal">
+                            <span>0 of 400 Cal</span>
+                            <img src="https://img.icons8.com/android/96/000000/plus.png" alt="">
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Evnening Snack</span>
+                        <div class="meal_cal">
+                            <span>0 of 400 Cal</span>
+                            <img src="https://img.icons8.com/android/96/000000/plus.png" alt="">
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <span>Dinner</span>
+                        <div class="meal_cal">
+                            <span>0 of 400 Cal</span>
+                            <img src="https://img.icons8.com/android/96/000000/plus.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nutrition_detail_progressBtn_container">
+                <span>
+                    Check your progress
+                </span>
+                <img src="https://img.icons8.com/material-sharp/48/000000/circled-up.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="activity_container">
+            <div class="glass_wrapper">
+                <img src="https://img.icons8.com/ios-glyphs/90/000000/macos-maximize.png" id="add_glass" alt="">
+                <div>
+                    <img src="/assets//notify_logo.png" id="glass_icon" alt="">
+                    <div>
+                        <div>
+                            <canvas id="waterPie"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://img.icons8.com/material-rounded/96/000000/minus-sign.png" id="remove_glass" alt="">
+            </div>
+            <p>Drink 9 glass <br/> <span>of water</span></p>
+        </div>
+        <div class="activity_container" id="medicine">
+                <img src="https://img.icons8.com/external-flatart-icons-solid-flatarticons/64/000000/external-medicine-coronavirus-covid19-flatart-icons-solid-flatarticons.png" id="activity_icon" alt="">
+            <p>Medicine <br/> <span>Reminder</span></p>
+        </div>
+        <div class="activity_container" id="sleep">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/sleep.png" id="activity_icon" alt="">
+            <p>Sleep 8hrs <br/> <span>daily</span></p>
+        </div>
+        <!-- <div class="activity_container" id="workout">
+                <img src="https://img.icons8.com/ios-filled/100/000000/running.png" id="activity_icon" alt="">
+            <p>Workout <br/> <span>daily</span></p>
+        </div> -->
+        <div class="activity_container" id="weight">
+                <img src="https://img.icons8.com/external-those-icons-fill-those-icons/96/000000/external-weight-medical-healthcare-those-icons-fill-those-icons.png" id="activity_icon" alt="">
+            <p>Weight <br/> <span>Tracking</span></p>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="modal_bg">
+        <div class="modal">
+            <!-- js -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://rawgit.com/grudus/Timepicker/master/dist/grudus-timepicker.es5.js"></script>
+</body>
+</html>

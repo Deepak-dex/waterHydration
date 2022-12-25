@@ -1,0 +1,28 @@
+.weight_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.weight_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ff7200;
+}
+
+.weight_container input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ff7200;
+    color: #ff7200;
+    width: 5em;
+    margin-right: -1.5em;
+    text-align: center;
+}
+
+.weight_container>div>span{
+margin-right: 1em;
+}

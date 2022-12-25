@@ -1,0 +1,131 @@
+.medicine_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.medicine_wrapper>p{
+    color: #ff7200;
+    font-weight: 500;
+}
+
+.medicine_reminder_list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5em;
+}
+
+.medicine_reminder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: .5em;
+    width: 17em;
+}
+
+.medicine_reminder>span{
+    color: #ff7200;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.medicine_reminder>div>span{
+    font-size: 1rem;
+    margin: 0px;
+    margin-top: 0.5em;
+}
+.medicine_reminder>div>p{
+    font-size: 0.6rem;
+    margin: 0px;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+#medicine_add{
+    margin: auto;
+    margin-top: 1em;
+    width: 3em;
+    filter: invert(58%) sepia(93%) saturate(4077%) hue-rotate(2deg) brightness(105%) contrast(104%);   
+}
+
+#time{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ff7200;
+    text-align: center;
+    margin-bottom: 0.8em;
+    cursor: pointer;
+}
+
+.week_days{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 0.4em;
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+}
+
+.day_btn{
+    color: #ff7200;
+    background-color: white;
+    border: 1px solid #ff7200;
+    padding: 0.3em 0.1em;
+    width: 3em;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .day_btn{
+    color: white;
+    background-color: #ff7200;
+
+}
+
+.week_days>input{
+    display: none;
+}
+
+.medicine_info{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5em;
+    align-items: center;
+    margin: 1em 0em;
+}
+.medicine_info>input{
+    width: 16em;
+    border: none;
+    border-bottom: 1.5px solid #ff7200;
+    outline: none;
+}
+.medicine_info>textarea{
+    width: 16em;
+    border: 1.5px solid #ff7200;
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+}
+
+.alram_btn_container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0em 3em;
+}
+
+.alram_btn_container>span{
+    margin-bottom: 1em;
+    background-color: #ff7200;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4em 1.4em;
+    border-radius: 14px;
+    text-align: center;
+}

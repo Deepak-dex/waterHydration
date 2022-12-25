@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Login And Register</title>
+    <link rel="stylesheet" href="./css/auth.css">
+</head>
+<body>
+    <div class="hero">
+       <div class="form-box">
+          <div class="button-box">
+             <div id="btn"></div>
+             <button type="button" class="toggle-btn">Log In</button>
+             <button type="button" class="toggle-btn">Register</button>
+          </div>
+          <div class="social-icons">
+            <img src="https://siasky.net/AABmXD-dL34UbXdgHfEHMTAIKy3oII0an4lc3ZpDBDzYFA">
+            <img src="https://siasky.net/CAAyIX7IFap5qisf_KpyjDHwTVp-P0KOEpvrWzvoIQYfLQ">
+            <img src="https://siasky.net/AABfpXLcC6HN8vhDR57RnqfHjS0oHF4TCbWhm03LT_-35w">
+         </div>
+         <form id="login" class="input-group">
+            <input type="text" class="input-field" id="log_email" placeholder="Email Id" required>
+            <input type="text" class="input-field" id="log_pass" placeholder="Enter Password" 
+            required>
+            <input type="checkbox" class="chech-box"><span>Remember Password</span>
+            <button class="submit-btn">Log in</button>
+         </form>
+         <form id="register" class="input-group">
+            <input type="email" class="input-field"  id="reg_email" placeholder="Email Id" required>
+            <input type="text" class="input-field" id="reg_pass" placeholder="Enter Password" required>
+            <input type="text" class="input-field" id="reg_pass2" placeholder="Enter Password" required>
+            <input type="tel" class="input-field" id="phoneno"  placeholder="Phone Number"  pattern="[0-9]{10}"required>
+
+            <input type="checkbox" class="chech-box"><span>I agree to terms & conditions</span>
+            <button class="submit-btn" >Register</button>
+         </form>
+       </div>
+ 
+    </div>
+<script src="./js/auth.js" type="module"></script>
+</body>
+</html>

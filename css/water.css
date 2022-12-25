@@ -1,0 +1,104 @@
+/* water Goal */
+.goal_container{
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+}
+
+.goal_container>p{
+    color: #ff7200;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.goal_container>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+#goal_inpt{
+    border: none;
+    border-bottom: 1px solid #ff7200;
+    width: 3em;
+    outline: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Water Reminder */
+
+.reminder_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+}
+
+.reminder_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -auto;
+}
+
+.reminder_header>p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ff7200;
+}
+
+.reminder_time{
+    font-size: 0.8rem;
+}
+.reminder_time>span{
+    color: #ff7200;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.reminder_interval_container{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.reminder_interval{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;   
+}
+
+.reminder_interval>div{
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"]:checked{
+    accent-color: #eb6c6c;
+}
+
+label,input{
+    cursor: pointer;
+}
+
+.reminder_interval>span{
+    color: #ff7200;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.reminder_interval>span>input{
+    color: #ff7200;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border: none;
+    /* border-bottom: 1px solid black; */
+    width: 13px;
+    outline: none;
+    margin-right: -4px;
+}

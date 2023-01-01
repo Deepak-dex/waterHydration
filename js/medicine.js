@@ -22,11 +22,18 @@ export const alarmDetail = ()=>{
         <div class="medicine_reminder">
             <div>
                 <span>${med.time}</span>
-                <p>${med.days.join(' ')}</p>
+                 <p>${med.days.join(' ')}</p>
             </div>
+            ${!med.taken && med.time.split(":")[0] < new Date().getHours()?
+            `<div class="medicine_alert">medicine not taken!</div>`:""
+            }
             <span>
                 ${med.medName}
             </span> 
+            ${med.taken ?
+            `<img src="https://img.icons8.com/material-outlined/24/null/checked--v1.png" class="medicine_taken"/>`:
+            `<img src="https://img.icons8.com/material-outlined/24/null/checked--v1.png" class="medicine_to_take"/>`
+             }
         </div>
         `
     })
@@ -37,12 +44,29 @@ export const alarmDetail = ()=>{
             time: "00:00",
             medName: "",
             dis: "",
-            days:[""]
+            days:[""],
+            taken: false
         })
         alarmDetail()
     })
 
     handleAlarms()
+    handleTakeMed()
+} 
+
+const handleTakeMed = ()=>{
+    Array.from(document.getElementsByClassName('medicine_to_take')).forEach((el)=>{
+        el.addEventListener('click',(e)=>{
+            if (e.target == e.currentTarget){
+                medicineTrack.forEach((obj)=>{
+                    if (obj.medName === e.target.parentNode.querySelectorAll('span')[1].innerText)
+                        obj.taken = true
+                })
+                saveobj()
+                alarmDetail()
+            }
+        })
+    })
 }
 
 const handleAlarms = ()=>{
@@ -138,7 +162,8 @@ const handleAlarms = ()=>{
                             medName: medName,
                             time: time,
                             dis:dis,
-                            days:days    
+                            days:days,    
+                            taken: false
                     }
     
                         for(let i=0; i<medicineTrack.length;i++){
@@ -168,6 +193,8 @@ const handleAlarms = ()=>{
 }
 
 const saveobj = ()=>{
+    console.log('sabeObj')
+    medicineTrack
     localStorage.setItem("waterHydrationMedicine",JSON.stringify(medicineTrack))
 }
 

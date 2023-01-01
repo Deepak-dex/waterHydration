@@ -17,6 +17,7 @@
 
 .medicine_reminder{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
@@ -28,8 +29,7 @@
 
 .medicine_reminder>span{
     color: #ff7200;
-    margin-left: 2em;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .medicine_reminder>div>span{
@@ -41,6 +41,24 @@
     font-size: 0.6rem;
     margin: 0px;
     margin-top: 0.5em;
+    cursor: pointer;
+}
+.medicine_alert{
+    position: absolute;
+    right: 8px;
+    top: 1px;
+    /* color: #ff7200; */
+    color: red;
+    font-size: 0.4rem;
+}
+.medicine_to_take{
+    filter: invert(50%) sepia(21%) saturate(7%) hue-rotate(109deg) brightness(96%) contrast(97%);
+    width: 16px;
+    cursor: pointer;
+}
+.medicine_taken{
+    filter: invert(43%) sepia(92%) saturate(1398%) hue-rotate(0deg) brightness(101%) contrast(106%);
+    width: 16px;
     cursor: pointer;
 }
 
